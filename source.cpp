@@ -47,7 +47,6 @@ void Init(_In_ HWND hWnd) {
 	UINT flag = D3D11_CREATE_DEVICE_SINGLETHREADED | D3D11_CREATE_DEVICE_BGRA_SUPPORT;
 #endif
 
-	D3D_FEATURE_LEVEL feat_11_1 = D3D_FEATURE_LEVEL_11_1;
 	D3D_FEATURE_LEVEL feat_11_0 = D3D_FEATURE_LEVEL_11_0;
 	D3D_FEATURE_LEVEL feat_10_1 = D3D_FEATURE_LEVEL_10_1;
 	D3D_FEATURE_LEVEL feat_10_0 = D3D_FEATURE_LEVEL_10_0;
@@ -56,9 +55,6 @@ void Init(_In_ HWND hWnd) {
 	D3D_FEATURE_LEVEL feat_9_1 = D3D_FEATURE_LEVEL_9_1;
 
 	if (SUCCEEDED(D3D11CreateDevice(nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, flag,
-		&feat_11_1, 1, D3D11_SDK_VERSION, &device, nullptr, &context)))
-		goto Continue;
-	else if (SUCCEEDED(D3D11CreateDevice(nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, flag,
 		&feat_11_0, 1, D3D11_SDK_VERSION, &device, nullptr, &context)))
 		goto Continue;
 	else if (SUCCEEDED(D3D11CreateDevice(nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, flag,
