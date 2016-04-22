@@ -9,6 +9,7 @@ using namespace Microsoft::WRL;
 ComPtr<ID3D11Device> device;
 ComPtr<ID3D11DeviceContext> context;
 ComPtr<ID3D11RenderTargetView> renderTarget;
+
 ComPtr<IDXGIFactory> factory;
 ComPtr<IDXGISwapChain> swapChain;
 
